@@ -11,5 +11,4 @@ The objective of this project was to design and implement a system capable of tr
 
 ### Hardware
 
-The data transmission system is implemented in DE0-Nano board, which contains a Cyclone V system-on-chip (SoC), consisting of a single-board computer and an FPGA. The microprocessor of the single-board computer is a dual core ARM Cortex-A9. By using the FPGA, users of the DE0-Nano board can develop custom hardware and interact with the GPIO ports.
-
+The data transmission system is implemented in DE0-Nano board, which contains a Cyclone V system-on-chip (SoC), consisting of a single-board computer and an FPGA. The microprocessor of the single-board computer is a dual core ARM Cortex-A9. By using the FPGA, users of the DE0-Nano board can develop custom hardware and interact with the GPIO ports. In the FPGA, we implement four hardware blocks: (i) a demultiplexer, (ii) a static random-access memory (SRAM), (iii) a direct memory access (DMA) controller, and (iv) finite state machine (FSM) controller. 
