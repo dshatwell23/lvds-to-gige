@@ -11,4 +11,9 @@ The objective of this project was to design and implement a system capable of tr
 
 ### Hardware
 
-The data transmission system is implemented in DE0-Nano board, which contains a Cyclone V system-on-chip (SoC), consisting of a single-board computer and an FPGA. The microprocessor of the single-board computer is a dual core ARM Cortex-A9. By using the FPGA, users of the DE0-Nano board can develop custom hardware and interact with the GPIO ports. In the FPGA, we implement four hardware blocks: (i) a demultiplexer, (ii) a static random-access memory (SRAM), (iii) a direct memory access (DMA) controller, and (iv) finite state machine (FSM) controller. 
+The data transmission system is implemented in DE0-Nano board, which contains a Cyclone V system-on-chip (SoC), consisting of a single-board computer and an FPGA. The microprocessor of the single-board computer is a dual core ARM Cortex-A9. By using the FPGA, users of the DE0-Nano board can develop custom hardware and interact with the GPIO ports. In the FPGA, we implement four hardware blocks: (i) a demultiplexer, (ii) a static random-access memory (SRAM), (iii) a direct memory access (DMA) controller, and (iv) finite state machine (FSM) controller.
+
+The JARS 2.0 system sends 32-bit words at a rate of 1 MHz (256 Mbps). The demultiplexer block is used to separate the words into bytes and store them in the SRAM. The DMA controller has to copy data from the SRAM to the on-chip RAM so that the processor can access and process it. All the FPGA blocks are controlled by a finite state machine, which has to synchronyze with the microprocessor and then control the flow of data on the hardware.
+
+### Software
+
