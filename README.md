@@ -20,3 +20,13 @@ The JARS 2.0 system sends 32-bit words at a rate of 1 MHz (256 Mbps). The demult
 The ARM Cortex-A9 microprocessor uses a Linux distribution, which already has the Ethernet protocol stack implemented. In order to acess the data from the on-chip RAM and send it through Ethernet, we developed a program in C that synchonizes with the FSM controller using flags. The microprocessor accessess the data in the position ```n``` while the DMA writes the next data fragment in the position ```n+1```. This process is able to run in parallel at frequencies of up 150 MHz. The flow diagram of the program implemented on the microprocessor is shown below.
 
 <img src="images/flow_diagram.png" alt="flow_diagram" height=450/>
+
+## Results
+
+### Hardware validation
+
+The Modelsim tool was used to create a testbench for the FPGA hardware components. Using a clock signal of 350 MHz, the FSM controller is able to write data at a frequency of 8 MHz to the SRAM. This means that the hardware components are working correctly, given that the radar sends data a lower frequency of 1 MHz.
+
+### Software validation
+
+Software validation was performed by generating artificial data in a separate block on the FPGA. By performing 10 different tests, sending 100 ethernet packets with the SRAM memory content each time, we determined that on average 96.5% of the packets were received. Transmission errors happen when the data arrives faster than the speed it takes for the processor to send it. In order to reduce this error, the code should be optimized in the future, perhaps using a buffer.
