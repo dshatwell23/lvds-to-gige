@@ -19,4 +19,4 @@ The JARS 2.0 system sends 32-bit words at a rate of 1 MHz (256 Mbps). The demult
 
 The ARM Cortex-A9 microprocessor uses a Linux distribution, which already has the Ethernet protocol stack implemented. In order to acess the data from the on-chip RAM and send it through Ethernet, we developed a program in C that synchonizes with the FSM controller using flags. The microprocessor accessess the data in the position ```n``` while the DMA writes the next data fragment in the position ```n+1```. This process is able to run in parallel at frequencies of up 150 MHz. The flow diagram of the program implemented on the microprocessor is shown below.
 
-<img src="images/flow_diagram.png" alt="flow_diagram" height=800/>
+<img src="images/flow_diagram.png" alt="flow_diagram" height=600/>
