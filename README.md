@@ -1,7 +1,7 @@
 # Data Transmission Through Gigabit Ethernet from a LVDS Interface Using a System On Chip (Single Board Computer + FPGA)
 
 ![teaser figure](images/teaser.png)
-**Anthropometric measurement estimation algorithm:** Block diagram of the LVDS to Gigabit Ethernet data transmission system. The system is implemented on a system-on-chip (SoC), which has a FPGA and a ARM Cortex-A9 microprocessor. Custom hardware created in the FPGA receives data from the LVDS signals and stores it in memory. Then, the processor access the memory and sends the data through Gigabit Ethernet.</p> 
+**Block diagram of the LVDS to Gigabit Ethernet data transmission system:** The system is implemented on a system-on-chip (SoC), which has a FPGA and a ARM Cortex-A9 microprocessor. Custom hardware created in the FPGA receives data from the LVDS signals and stores it in memory. Then, the processor access the memory and sends the data through Gigabit Ethernet.</p> 
 
 This repository contains the files used to implement the LVDS to Gigabit Ethernet data transmission system, developed in the summer internship program of the Jicamarca Radio Observatory. 
 
